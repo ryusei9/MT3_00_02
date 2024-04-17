@@ -195,6 +195,7 @@ Matrix4x4 Inverse(const Matrix4x4& m){
 		- m.m[0][2] * m.m[1][1] * m.m[2][0] - m.m[0][1] * m.m[1][0] * m.m[2][2] - m.m[0][0] * m.m[1][2] * m.m[2][1]) / A;
 	return resultInverse;
 }
+// 転置行列
 Matrix4x4 Transpose(const Matrix4x4& m){
 	Matrix4x4 resultTranspose = {};
 	for (int i = 0; i < 4; i++) {
@@ -204,6 +205,7 @@ Matrix4x4 Transpose(const Matrix4x4& m){
 	}
 	return resultTranspose;
 }
+// 単位行列
 Matrix4x4 MakeIdentity4x4(){
 	Matrix4x4 resultIdentity = {};
 	for (int i = 0; i < 4; i++) {
